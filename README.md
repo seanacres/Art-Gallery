@@ -23,7 +23,7 @@ Please fork and clone this repository. The starter project has paintings pre-add
 
 #### Painting Model
 
-You will a single model object for this project. It should represent a single painting, with an image and a value that indicates whether the user has liked it or not.
+You will create a single model object for this project. It should represent a single painting, with an image and a value that indicates whether the user has liked it or not.
 
 1. Create a new Swift file called `Painting.swift`
 2. In the new file, create a class `Painting`
