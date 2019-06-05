@@ -21,9 +21,7 @@ class PaintingController {
         }
     }
     
-    init(paintings: [Painting]) {
-        self.paintings = paintings
-        
+    init() {
         loadPaintingsFromAssets()
     }
     
