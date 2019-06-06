@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PaintingListViewController: UIViewController {
+class PaintingListViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet var tableView: UITableView!
     
@@ -16,12 +16,14 @@ class PaintingListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        tableView.register(UINib(nibName: "PaintingTableViewCell", bundle: nil), forCellReuseIdentifier: "PaintingCell")
         tableView.dataSource = self
+        tableView.delegate = self
+        tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableViewAutomaticDimension
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -50,8 +52,6 @@ extension PaintingListViewController: UITableViewDataSource {
         cell.delegate = self
         return cell
     }
-    
-    
 }
 
 extension PaintingListViewController: PaintingTableViewCellDelegate {

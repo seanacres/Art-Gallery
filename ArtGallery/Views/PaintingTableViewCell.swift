@@ -1,5 +1,5 @@
 //
-//  PaintingTableViewCell.swift
+//  PaintingTestTableViewCell.swift
 //  ArtGallery
 //
 //  Created by Sean Acres on 6/5/19.
@@ -14,8 +14,8 @@ protocol PaintingTableViewCellDelegate: class {
 
 class PaintingTableViewCell: UITableViewCell {
 
-    @IBOutlet var paintingImage: UIImageView!
-    @IBOutlet var likeButtonLabel: UIButton!
+    @IBOutlet weak var paintingImageView: UIImageView!
+    @IBOutlet weak var likeButtonLabel: UIButton!
     weak var delegate: PaintingTableViewCellDelegate?
     
     var painting: Painting? {
@@ -24,13 +24,18 @@ class PaintingTableViewCell: UITableViewCell {
         }
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+
     @IBAction func likeButtonTapped(_ sender: Any) {
         self.delegate?.likeButtonWasTapped(on: self)
     }
     
     private func updateViews() {
         guard let painting = painting else { return }
-        paintingImage.image = painting.image
+        paintingImageView.image = painting.image
+        paintingImageView.sizeToFit()
         
         if painting.isLiked {
             likeButtonLabel.setTitle("Liked", for: .normal)
@@ -39,4 +44,6 @@ class PaintingTableViewCell: UITableViewCell {
             likeButtonLabel.setTitle("Like", for: .normal)
         }
     }
+    
+    
 }
