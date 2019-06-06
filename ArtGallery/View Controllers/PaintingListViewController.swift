@@ -60,6 +60,6 @@ extension PaintingListViewController: PaintingTableViewCellDelegate {
             let indexPath = tableView.indexPath(for: cell) else { return }
         
         paintingController.toggleIsLiked(for: painting)
-        tableView.reloadRows(at: [indexPath], with: .none)
+        tableView.reloadRows(at: [indexPath], with: .fade)
     }
 }
