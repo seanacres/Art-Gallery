@@ -16,6 +16,8 @@ class PaintingTableViewCell: UITableViewCell {
 
     @IBOutlet weak var paintingImageView: UIImageView!
     @IBOutlet weak var likeButtonLabel: UIButton!
+    @IBOutlet var heightConstraint: NSLayoutConstraint!
+    
     weak var delegate: PaintingTableViewCellDelegate?
     
     var painting: Painting? {
@@ -34,8 +36,15 @@ class PaintingTableViewCell: UITableViewCell {
     
     private func updateViews() {
         guard let painting = painting else { return }
+        
         paintingImageView.image = painting.image
-        paintingImageView.sizeToFit()
+        
+        let aspectRatio = painting.image.size.width / painting.image.size.height
+        let newPaintingImageViewHeight = paintingImageView.frame.width / aspectRatio
+        heightConstraint.constant = newPaintingImageViewHeight
+        self.layoutIfNeeded()
+        
+        paintingImageView.image = painting.image
         
         if painting.isLiked {
             likeButtonLabel.setTitle("Liked", for: .normal)
