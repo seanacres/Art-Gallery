@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaintingCell" rowHeight="181" id="KGk-i7-Jjw" customClass="PaintingTableViewCell" customModule="ArtGallery" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="181"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="180.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="253" verticalHuggingPriority="253" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="iJe-lV-Twd" customClass="ScaledHeightImageView" customModule="ArtGallery" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sz6-9j-CvF">
+                        <rect key="frame" x="0.0" y="108" width="320" height="64.5"/>
+                        <state key="normal" title="Like"/>
+                        <connections>
+                            <action selector="likeButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="obq-tk-ih0"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Sz6-9j-CvF" firstAttribute="top" secondItem="iJe-lV-Twd" secondAttribute="bottom" constant="8" id="JQj-OC-RpJ"/>
+                    <constraint firstAttribute="trailing" secondItem="iJe-lV-Twd" secondAttribute="trailing" id="Qa9-9o-Wv5"/>
+                    <constraint firstItem="iJe-lV-Twd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="W1p-Fs-2f7"/>
+                    <constraint firstAttribute="bottom" secondItem="Sz6-9j-CvF" secondAttribute="bottom" constant="8" id="e4T-zH-Uxd"/>
+                    <constraint firstItem="iJe-lV-Twd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="l2I-Kv-9nX"/>
+                    <constraint firstAttribute="trailing" secondItem="Sz6-9j-CvF" secondAttribute="trailing" id="lLO-mc-LU0"/>
+                    <constraint firstItem="Sz6-9j-CvF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="u4a-Jy-EAt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="likeButtonLabel" destination="Sz6-9j-CvF" id="SFR-eV-8cd"/>
+                <outlet property="paintingImageView" destination="iJe-lV-Twd" id="KlI-1Q-4mV"/>
+            </connections>
+            <point key="canvasLocation" x="-1546.376811594203" y="131.58482142857142"/>
+        </tableViewCell>
+    </objects>
+</document>
