@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PaintingListViewController: UIViewController, UITableViewDelegate {
+class PaintingListViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     
@@ -19,9 +19,6 @@ class PaintingListViewController: UIViewController, UITableViewDelegate {
         
         tableView.register(UINib(nibName: "PaintingTableViewCell", bundle: nil), forCellReuseIdentifier: "PaintingCell")
         tableView.dataSource = self
-        tableView.delegate = self
-        tableView.estimatedRowHeight = 44
-        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     /*

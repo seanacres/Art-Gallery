@@ -14,10 +14,8 @@ protocol PaintingTableViewCellDelegate: class {
 
 class PaintingTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var paintingImageView: UIImageView!
+    @IBOutlet var paintingImageView: ScaledHeightImageView!
     @IBOutlet weak var likeButtonLabel: UIButton!
-    @IBOutlet var heightConstraint: NSLayoutConstraint!
-    
     weak var delegate: PaintingTableViewCellDelegate?
     
     var painting: Painting? {
@@ -26,23 +24,12 @@ class PaintingTableViewCell: UITableViewCell {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
     @IBAction func likeButtonTapped(_ sender: Any) {
         self.delegate?.likeButtonWasTapped(on: self)
     }
     
     private func updateViews() {
         guard let painting = painting else { return }
-        
-        paintingImageView.image = painting.image
-        
-        let aspectRatio = painting.image.size.width / painting.image.size.height
-        let newPaintingImageViewHeight = paintingImageView.frame.width / aspectRatio
-        heightConstraint.constant = newPaintingImageViewHeight
-        self.layoutIfNeeded()
         
         paintingImageView.image = painting.image
         

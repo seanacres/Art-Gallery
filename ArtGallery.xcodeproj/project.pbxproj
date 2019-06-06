@@ -16,6 +16,7 @@
 		6625D5CA22A851230089782A /* PaintingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6625D5C922A851230089782A /* PaintingListViewController.swift */; };
 		6625D5CF22A890B50089782A /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6625D5CD22A890B50089782A /* PaintingTableViewCell.swift */; };
 		6625D5D022A890B50089782A /* PaintingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6625D5CE22A890B50089782A /* PaintingTableViewCell.xib */; };
+		6625D5D422A8B8750089782A /* ScaledHeightImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6625D5D322A8B8750089782A /* ScaledHeightImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		6625D5C922A851230089782A /* PaintingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingListViewController.swift; sourceTree = "<group>"; };
 		6625D5CD22A890B50089782A /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
 		6625D5CE22A890B50089782A /* PaintingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaintingTableViewCell.xib; sourceTree = "<group>"; };
+		6625D5D322A8B8750089782A /* ScaledHeightImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledHeightImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				6625D5CD22A890B50089782A /* PaintingTableViewCell.swift */,
+				6625D5D322A8B8750089782A /* ScaledHeightImageView.swift */,
 				6625D5CE22A890B50089782A /* PaintingTableViewCell.xib */,
 			);
 			path = Views;
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6625D5C122A84ACF0089782A /* Painting.swift in Sources */,
+				6625D5D422A8B8750089782A /* ScaledHeightImageView.swift in Sources */,
 				6625D5C422A84B4B0089782A /* PaintingController.swift in Sources */,
 				6625D5CA22A851230089782A /* PaintingListViewController.swift in Sources */,
 				469AAC42210258C200C0D421 /* AppDelegate.swift in Sources */,
